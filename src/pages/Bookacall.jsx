@@ -89,11 +89,11 @@ export default function BookACall() {
             {/* Calendly Placeholder */}
             <div className="bg-amber-50 border border-amber-100 rounded-xl p-10 mb-6">
               <p className="text-amber-700 text-sm font-medium mb-2">
-                Calendly will be embedded here
+                Lock a calendly spot
               </p>
 
               <p className="text-gray-400 text-xs">
-                Connect your Calendly account to show live booking slots
+                Need to connect calendly
               </p>
             </div>
 
