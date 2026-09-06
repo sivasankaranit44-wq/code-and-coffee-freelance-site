@@ -16,14 +16,14 @@ export default function Portfolio() {
   github: "https://github.com/sivasankaranit44-wq",
   tag: "Full Stack",
   },
-    {
-      title: "Nostra - E-commerce Platform",
-      desc: "A responsive e-commerce website focused on user experience and clean UI with product listing and category based navigation.",
-      tech: ["HTML", "CSS", "JavaScript", "Tailwind CSS"],
-      live: "https://siva918641.github.io/Nostra-e-commerce-platform/index.html",
-      github: "https://github.com/Siva918641",
-      tag: "Frontend",
-    },
+ {
+  title: "Brewdesk - CRM Dashboard",
+  desc: "A full stack CRM dashboard with real-time search, advanced filtering, drag and drop reordering, pagination, customer CRUD operations, and dark themed UI.",
+  tech: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
+  live: "https://brewdesk-frontend.vercel.app/",
+  github: "https://github.com/sivasankaranit44-wq",
+  tag: "Full Stack",
+},
     {
       title: "LexiBreak - The Quiz App",
       desc: "An interactive quiz application with reusable components, client side routing, dynamic question fetching via API, and scoring logic.",
