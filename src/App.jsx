@@ -9,20 +9,18 @@ import Navbar from './components/Navbar'
 
 function App() {
   return(
-  <> 
-  <BrowserRouter> 
-    <Navbar />
-    <Routes>
-      <Route path='/' element ={<Home />} Home /> 
-      <Route path='/about' element={<About />} About /> 
-      <Route path='/contact' element={<Contact />} Contact /> 
-      <Route path='/portfolio' element={<Portfolio />} Portfolio /> 
-      <Route path='/bookacall' element={<BookACall />} BookACall /> 
-      <Route path='/services' element={<Services />} Services />
-    </Routes>
-  </BrowserRouter>
-  </>
-)
+    <BrowserRouter> 
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/portfolio' element={<Portfolio />} />
+        <Route path='/bookacall' element={<BookACall />} />
+        <Route path='/services' element={<Services />} />
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
 export default App
