@@ -501,7 +501,7 @@ export default function About() {
 
   <div className="relative mx-auto max-w-2xl">
 
-```
+
 <h2 className="mb-4 text-3xl font-bold">
   Have a problem you want to solve?
 </h2>
@@ -517,7 +517,7 @@ export default function About() {
 >
   Let's Talk
 </Link>
-```
+
 
   </div>
 </section>
