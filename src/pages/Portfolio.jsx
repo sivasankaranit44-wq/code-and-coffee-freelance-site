@@ -131,6 +131,71 @@ export default function Portfolio() {
 
         </div>
       </section>
+ 
+{/* Security & Web Application Security */}
+<section className="py-20 px-6 bg-white">
+  <div className="max-w-4xl mx-auto">
+
+    <div className="text-center mb-10">
+      <span className="inline-block bg-amber-100 text-amber-700 text-xs font-semibold px-4 py-1.5 rounded-full mb-4 tracking-wide uppercase">
+        Security
+      </span>
+
+      <h2 className="text-3xl font-bold text-amber-900 mb-4">
+        I build with security in mind.
+      </h2>
+
+      <p className="text-gray-500 text-sm leading-relaxed max-w-xl mx-auto">
+        Alongside full-stack development, I have hands-on knowledge of
+        web application security. I focus on identifying common security
+        weaknesses and building applications with safer authentication,
+        authorization and API practices.
+      </p>
+    </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+      {[
+        {
+          title: "Web Application Security",
+          desc: "Security-focused development and reviews for web applications, with attention to authentication, authorization, input handling and common web security issues.",
+        },
+        {
+          title: "API Security",
+          desc: "Reviewing API access, protected routes, authentication and authorization to help prevent unauthorized access to application data and functionality.",
+        },
+        {
+          title: "Secure Authentication",
+          desc: "Implementing and reviewing authentication and role-based access controls so users can access only what they are supposed to.",
+        },
+      ].map((item, i) => (
+        <div
+          key={i}
+          className="rounded-2xl border border-amber-100 bg-amber-50 p-6"
+        >
+          <h3 className="text-lg font-semibold text-amber-900 mb-3">
+            {item.title}
+          </h3>
+
+          <p className="text-sm text-gray-500 leading-relaxed">
+            {item.desc}
+          </p>
+        </div>
+      ))}
+
+    </div>
+
+    <div className="mt-8 text-center">
+      <p className="text-sm text-gray-500">
+        Need a website or web application with security considered from the start?
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+
 
       {/* CTA */}
       <section className="py-20 px-6 bg-amber-700 text-white text-center">
