@@ -5,27 +5,34 @@ export default function Home() {
     <div className="min-h-screen bg-amber-50">
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <span className="inline-block bg-amber-100 text-amber-700 text-xs font-semibold px-4 py-1.5 rounded-full mb-6 tracking-wide uppercase">
-            Available for Freelance Work
+      <section className="px-6 pt-32 pb-20">
+        <div className="mx-auto max-w-4xl text-center">
+          <span className="mb-6 inline-block rounded-full bg-amber-100 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-amber-700">
+            Freelance Web Developer
           </span>
-          <h1 className="text-5xl font-bold text-amber-900 leading-tight mb-6">
-            Stop losing customers to businesses with <span className="text-amber-600">better websites.</span>
+
+          <h1 className="mb-6 text-5xl font-bold leading-tight text-amber-900">
+            Your business deserves a website that
+            <span className="text-amber-600"> actually helps.</span>
           </h1>
-          <p className="text-lg text-gray-600 leading-relaxed mb-10 max-w-2xl mx-auto">
-            I build custom web applications and websites that solve real business problems — not just look good. If your current tools are slowing you down or your competitors are winning online, let's fix that.
+
+          <p className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-gray-600">
+            I build websites and web applications for businesses that want
+            to look professional, reach more people, and make their day-to-day
+            work a little easier.
           </p>
-          <div className="flex items-center justify-center gap-4">
+
+          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
               to="/bookacall"
-              className="bg-amber-700 hover:bg-amber-800 text-white font-medium px-8 py-3 rounded-xl text-sm transition"
+              className="rounded-xl bg-amber-700 px-8 py-3 text-sm font-medium text-white transition hover:-translate-y-0.5 hover:bg-amber-800 hover:shadow-lg"
             >
-              Schedule a Free Audit →
+              Let's Talk About Your Project
             </Link>
+
             <Link
               to="/portfolio"
-              className="border border-amber-700 text-amber-700 hover:bg-amber-100 font-medium px-8 py-3 rounded-xl text-sm transition"
+              className="rounded-xl border border-amber-700 px-8 py-3 text-sm font-medium text-amber-700 transition hover:bg-amber-100"
             >
               See My Work
             </Link>
@@ -33,76 +40,96 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Value Bar */}
-      <section className="py-10 px-6 bg-white border-y border-amber-100">
-        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-          {[
-            {
-              icon: "⚡",
-              title: "Faster Execution",
-              desc: "Eliminate manual work and slow processes with custom built automation.",
-            },
-            {
-              icon: "📈",
-              title: "Measurable Results",
-              desc: "Every feature built has a clear business goal — not just a technical checkbox.",
-            },
-            {
-              icon: "🔒",
-              title: "Built to Scale",
-              desc: "Clean, secure, maintainable code that grows with your business.",
-            },
-          ].map((item, i) => (
-            <div key={i} className="flex flex-col items-center gap-2">
-              <span className="text-3xl">{item.icon}</span>
-              <h3 className="font-semibold text-amber-900 text-sm">{item.title}</h3>
-              <p className="text-gray-500 text-xs leading-relaxed">{item.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Problem Section */}
-      <section className="py-20 px-6 bg-amber-50">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-amber-900 mb-4">
-              Is your business being held back by the wrong tools?
+      {/* What I Can Help With */}
+      <section className="border-y border-amber-100 bg-white px-6 py-16">
+        <div className="mx-auto max-w-4xl">
+          <div className="mb-10 text-center">
+            <h2 className="mb-3 text-3xl font-bold text-amber-900">
+              What can I help you build?
             </h2>
-            <p className="text-gray-500 text-sm max-w-xl mx-auto">
-              Most growing businesses hit a wall when their off-the-shelf tools and spreadsheets can no longer keep up. Does any of this sound familiar?
+
+            <p className="mx-auto max-w-xl text-sm leading-relaxed text-gray-500">
+              Whether you need a simple website or something more custom,
+              I can help you turn the idea into something people can actually use.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
             {[
               {
-                icon: "😓",
-                title: "Drowning in Manual Work",
-                desc: "Your team spends hours on repetitive tasks — copy pasting data, sending manual follow ups, managing spreadsheets — instead of focusing on what actually grows the business.",
+                title: "Business Websites",
+                desc: "A clean, mobile-friendly website that helps people understand your business and get in touch.",
               },
               {
-                icon: "📦",
-                title: "Outgrown Your Current Tools",
-                desc: "The platforms you started with no longer fit how your business actually works. You're paying for features you don't need and missing the ones you do.",
+                title: "Custom Web Apps",
+                desc: "A web application built around the way your business actually works instead of forcing you into a fixed system.",
               },
               {
-                icon: "🌐",
-                title: "Invisible Online",
-                desc: "Someone hears about your business, Googles you, and finds nothing — or worse, a outdated website that makes them question your credibility.",
-              },
-              {
-                icon: "📊",
-                title: "No Visibility into What's Working",
-                desc: "Key business data is scattered across different tools. You're making decisions based on gut feeling because you can't see what's actually happening.",
+                title: "MERN Development",
+                desc: "Full-stack development using React, Node.js, Express and MongoDB for projects that need more than a simple website.",
               },
             ].map((item, i) => (
               <div
                 key={i}
-                className="bg-white rounded-2xl p-6 border border-amber-100 shadow-sm"
+                className="rounded-2xl border border-amber-100 bg-amber-50 p-6"
               >
-                <span className="text-3xl mb-3 block">{item.icon}</span>
-                <h3 className="font-semibold text-amber-900 mb-2 text-sm">{item.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
+                <h3 className="mb-3 font-semibold text-amber-900">
+                  {item.title}
+                </h3>
+
+                <p className="text-sm leading-relaxed text-gray-500">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Problems Section */}
+      <section className="bg-amber-50 px-6 py-20">
+        <div className="mx-auto max-w-4xl">
+          <div className="mb-12 text-center">
+            <h2 className="mb-4 text-3xl font-bold text-amber-900">
+              Maybe your current setup is making things harder than they need to be.
+            </h2>
+
+            <p className="mx-auto max-w-xl text-sm leading-relaxed text-gray-500">
+              You don't always need a complicated solution. Sometimes you just
+              need the right one.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+            {[
+              {
+                title: "You don't have a proper website",
+                desc: "People hear about your business, search for you online, and can't find enough information to trust you.",
+              },
+              {
+                title: "You're doing too much manually",
+                desc: "Spreadsheets, copy-pasting and repetitive tasks are taking up time that could be spent on the business.",
+              },
+              {
+                title: "Your current website feels outdated",
+                desc: "Your business has grown, but your website still looks and works like it did years ago.",
+              },
+              {
+                title: "The tools you use don't quite fit",
+                desc: "You've adapted your workflow around software instead of having software that fits the way you work.",
+              },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="rounded-2xl border border-amber-100 bg-white p-6 shadow-sm"
+              >
+                <h3 className="mb-2 font-semibold text-amber-900">
+                  {item.title}
+                </h3>
+
+                <p className="text-sm leading-relaxed text-gray-500">
+                  {item.desc}
+                </p>
               </div>
             ))}
           </div>
@@ -110,125 +137,104 @@ export default function Home() {
       </section>
 
       {/* What I Build */}
-      <section className="py-20 px-6 bg-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-amber-900 mb-4">
-            What you get when you work with me
+      <section className="bg-white px-6 py-20">
+        <div className="mx-auto max-w-4xl text-center">
+          <h2 className="mb-4 text-3xl font-bold text-amber-900">
+            What I build
           </h2>
-          <p className="text-gray-500 text-sm mb-12 max-w-xl mx-auto">
-            I don't just write code. I build solutions that solve the exact problem your business is facing right now.
+
+          <p className="mx-auto mb-12 max-w-xl text-sm leading-relaxed text-gray-500">
+            I keep things simple. We start with what your business needs,
+            then build only what makes sense.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+
+          <div className="grid grid-cols-1 gap-6 text-left md:grid-cols-2">
             {[
               {
-                icon: "🌐",
-                title: "Business Websites & Landing Pages",
-                problem: "No online presence or an outdated website losing you credibility.",
-                outcome: "A clean, fast, mobile-ready website that converts visitors into customers.",
+                title: "Business Websites",
+                desc: "Websites for businesses that need a clear online presence, better presentation, and an easy way for customers to reach them.",
               },
               {
-                icon: "⚙️",
+                title: "Landing Pages",
+                desc: "Focused pages for a service, product, event or campaign, designed to make the next step clear for visitors.",
+              },
+              {
                 title: "Custom Web Applications",
-                problem: "Off-the-shelf software doesn't fit your exact workflow.",
-                outcome: "A bespoke web app built around how your business actually operates.",
+                desc: "Internal tools, dashboards and business applications built around your actual workflow.",
               },
               {
-                icon: "🔗",
-                title: "Full Stack MERN Development",
-                problem: "You need a complete product — frontend, backend, and database.",
-                outcome: "End to end development from the UI your users see to the database that powers it.",
-              },
-              {
-                icon: "🛒",
-                title: "E-commerce Platforms",
-                problem: "Generic platforms limiting your store's potential and charging high fees.",
-                outcome: "A custom online store built around your products, your brand, your rules.",
+                title: "E-commerce Websites",
+                desc: "Online stores built around your products and the way you want your customers to shop.",
               },
             ].map((service, i) => (
               <div
                 key={i}
-                className="bg-amber-50 rounded-2xl p-6 border border-amber-100"
+                className="rounded-2xl border border-amber-100 bg-amber-50 p-6"
               >
-                <div className="text-3xl mb-3">{service.icon}</div>
-                <h3 className="font-semibold text-amber-900 mb-3">{service.title}</h3>
-                <div className="space-y-2">
-                  <p className="text-xs text-red-500 font-medium">
-                    The Problem: <span className="text-gray-500 font-normal">{service.problem}</span>
-                  </p>
-                  <p className="text-xs text-green-600 font-medium">
-                    The Outcome: <span className="text-gray-500 font-normal">{service.outcome}</span>
-                  </p>
-                </div>
+                <h3 className="mb-3 font-semibold text-amber-900">
+                  {service.title}
+                </h3>
+
+                <p className="text-sm leading-relaxed text-gray-500">
+                  {service.desc}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Case Studies */}
-      <section className="py-20 px-6 bg-amber-50">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-amber-900 mb-4">
-              Proof of what gets built
+      {/* Projects */}
+      <section className="bg-amber-50 px-6 py-20">
+        <div className="mx-auto max-w-4xl">
+          <div className="mb-12 text-center">
+            <h2 className="mb-4 text-3xl font-bold text-amber-900">
+              A few things I've built
             </h2>
-            <p className="text-gray-500 text-sm">
-              Real projects. Real problems solved. Real results.
+
+            <p className="text-sm text-gray-500">
+              These are some of the projects I've worked on while building my skills.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             {[
               {
-                name: "Brewdesk — CRM Dashboard",
-                challenge: "Businesses managing customers through spreadsheets and scattered notes, losing track of leads and follow ups.",
-                solution: "Built a full stack CRM dashboard with real-time search, advanced filtering, drag and drop reordering, and complete customer management.",
-                outcome: "All customer data in one place. Zero missed follow ups. Full visibility into every lead.",
-                tag: "Full Stack MERN",
+                name: "BrewDesk",
+                type: "CRM Dashboard",
+                desc: "A full-stack CRM built to manage customers, search and filter records, and keep everything in one place.",
               },
               {
-                name: "Brew Invoice — Invoice Generator",
-                challenge: "Freelancers and small businesses creating invoices manually in Word or Excel, wasting hours and looking unprofessional.",
-                solution: "Built a full stack invoicing platform with PDF generation, automated email delivery, client management, and payment status tracking.",
-                outcome: "Invoices sent in minutes. Professional PDF attached automatically. Complete financial visibility.",
-                tag: "Full Stack MERN",
+                name: "BrewBill",
+                type: "Invoice Generator",
+                desc: "A full-stack invoicing application for creating invoices, managing clients and generating professional PDFs.",
               },
               {
-                name: "Business Website",
-                challenge: "A business with no online presence losing potential customers to competitors who show up on Google.",
-                solution: "A clean, fast, mobile responsive website with clear messaging, service pages, and a contact form that actually converts.",
-                outcome: "Credible online presence. More inquiries. Customers who find you before they find your competitor.",
-                tag: "Web Development",
+                name: "BrewCast",
+                type: "Email Campaign Platform",
+                desc: "An email campaign and automation platform for creating, managing and sending email campaigns.",
               },
               {
-                name: "Custom Web Application",
-                challenge: "A growing business stuck using generic SaaS tools that don't fit their exact workflow, paying for features they don't need.",
-                solution: "A bespoke web application built around their specific operations — their process, their data, their rules.",
-                outcome: "Eliminated the workarounds. Reduced manual work. A tool that actually fits how the business runs.",
-                tag: "Custom Software",
+                name: "Business Websites",
+                type: "Web Development",
+                desc: "Clean and responsive websites designed to help businesses present their services and make it easier for customers to connect.",
               },
-            ].map((study, i) => (
+            ].map((project, i) => (
               <div
                 key={i}
-                className="bg-white rounded-2xl p-6 border border-amber-100 shadow-sm"
+                className="rounded-2xl border border-amber-100 bg-white p-6 shadow-sm"
               >
-                <span className="inline-block bg-amber-100 text-amber-700 text-xs font-semibold px-3 py-1 rounded-full mb-4">
-                  {study.tag}
+                <span className="mb-3 inline-block rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold text-amber-700">
+                  {project.type}
                 </span>
-                <h3 className="font-bold text-amber-900 mb-4">{study.name}</h3>
-                <div className="space-y-3">
-                  <div>
-                    <p className="text-xs font-semibold text-red-500 mb-1">The Challenge</p>
-                    <p className="text-xs text-gray-500 leading-relaxed">{study.challenge}</p>
-                  </div>
-                  <div>
-                    <p className="text-xs font-semibold text-amber-700 mb-1">The Solution</p>
-                    <p className="text-xs text-gray-500 leading-relaxed">{study.solution}</p>
-                  </div>
-                  <div>
-                    <p className="text-xs font-semibold text-green-600 mb-1">The Outcome</p>
-                    <p className="text-xs text-gray-500 leading-relaxed">{study.outcome}</p>
-                  </div>
-                </div>
+
+                <h3 className="mb-3 text-lg font-bold text-amber-900">
+                  {project.name}
+                </h3>
+
+                <p className="text-sm leading-relaxed text-gray-500">
+                  {project.desc}
+                </p>
               </div>
             ))}
           </div>
@@ -236,115 +242,113 @@ export default function Home() {
       </section>
 
       {/* How I Work */}
-      <section className="py-20 px-6 bg-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-amber-900 mb-4">
+      <section className="bg-white px-6 py-20">
+        <div className="mx-auto max-w-4xl text-center">
+          <h2 className="mb-4 text-3xl font-bold text-amber-900">
             How I work
           </h2>
-          <p className="text-gray-500 text-sm mb-12 max-w-xl mx-auto">
-            No hidden costs. No technical jargon. No radio silence. Just clear, honest progress from start to finish.
+
+          <p className="mx-auto mb-12 max-w-xl text-sm leading-relaxed text-gray-500">
+            Nothing complicated. We talk about what you need, agree on the
+            work, and build it step by step.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-left">
+
+          <div className="grid grid-cols-1 gap-6 text-left md:grid-cols-4">
             {[
               {
                 step: "01",
-                title: "Discovery Call",
-                desc: "We talk about your business, your current pain points, and what success actually looks like for you.",
+                title: "Talk",
+                desc: "We discuss your business, your idea and what you actually need.",
               },
               {
                 step: "02",
-                title: "Clear Scope",
-                desc: "You get a clear breakdown of what will be built, how long it takes, and what it costs. No surprises.",
+                title: "Plan",
+                desc: "We agree on the features, timeline and cost before I start.",
               },
               {
                 step: "03",
-                title: "Build & Show",
-                desc: "I build in stages and show you progress regularly so you're never left wondering what's happening.",
+                title: "Build",
+                desc: "I build the project in stages and keep you updated along the way.",
               },
               {
                 step: "04",
-                title: "Launch & Support",
-                desc: "Your product goes live. I hand over everything and stay available for questions and future updates.",
+                title: "Launch",
+                desc: "Once everything is ready, we launch and I help with the next steps.",
               },
             ].map((step, i) => (
-              <div key={i} className="bg-amber-50 rounded-2xl p-6 border border-amber-100">
-                <div className="text-3xl font-bold text-amber-200 mb-3">{step.step}</div>
-                <h3 className="font-semibold text-amber-900 mb-2 text-sm">{step.title}</h3>
-                <p className="text-gray-500 text-xs leading-relaxed">{step.desc}</p>
+              <div
+                key={i}
+                className="rounded-2xl border border-amber-100 bg-amber-50 p-6"
+              >
+                <div className="mb-3 text-3xl font-bold text-amber-200">
+                  {step.step}
+                </div>
+
+                <h3 className="mb-2 text-sm font-semibold text-amber-900">
+                  {step.title}
+                </h3>
+
+                <p className="text-xs leading-relaxed text-gray-500">
+                  {step.desc}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Why Me */}
-      <section className="py-20 px-6 bg-amber-50">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-amber-900 mb-4">
-            Why work with me?
+      {/* About Me */}
+      <section className="bg-amber-50 px-6 py-20">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="mb-4 text-3xl font-bold text-amber-900">
+            Why Code & Coffee?
           </h2>
-          <p className="text-gray-500 text-sm mb-12">
-            I'm not your average developer.
+
+          <p className="mb-6 text-sm leading-7 text-gray-600">
+            Before becoming a developer, I spent 3.5 years in sales.
+            That experience changed the way I look at websites and software.
+            I don't just think about how something works technically.
+            I also think about the person who will actually use it and
+            the business behind it.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              {
-                icon: "💬",
-                title: "Business First",
-                desc: "I spent 3.5 years in sales before becoming a developer. I understand what clients actually need — not just what they ask for.",
-              },
-              {
-                icon: "🎯",
-                title: "Zero Jargon",
-                desc: "You'll always get plain English updates. No technical confusion. You'll always know exactly where things stand.",
-              },
-              {
-                icon: "⚡",
-                title: "Reliable Delivery",
-                desc: "I respect your time and your deadlines. If something changes, you hear it from me first — not after it's already a problem.",
-              },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="bg-white rounded-2xl p-6 border border-amber-100 shadow-sm"
-              >
-                <div className="text-3xl mb-3">{item.icon}</div>
-                <h3 className="font-semibold text-amber-900 mb-2">{item.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
+
+          <p className="text-sm leading-7 text-gray-600">
+            Code & Coffee is my way of bringing both sides together:
+            understanding the problem, building a practical solution,
+            and keeping the whole process simple and honest.
+          </p>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-6 bg-amber-700 text-white text-center">
-        <div className="max-w-2xl mx-auto">
-          <h2 className="text-3xl font-bold mb-4">
-            Ready to stop losing business to better websites?
+      <section className="bg-amber-700 px-6 py-20 text-center text-white">
+        <div className="mx-auto max-w-2xl">
+          <h2 className="mb-4 text-3xl font-bold">
+            Have a project in mind?
           </h2>
-          <p className="text-amber-100 text-sm mb-3">
-            Let's have a free 15 minute call. No sales pitch. Just an honest conversation about your business and whether I can actually help.
+
+          <p className="mb-8 text-sm leading-relaxed text-amber-100">
+            Tell me what you're working on. We can have a quick conversation
+            and see if I can help.
           </p>
-          <p className="text-amber-200 text-xs mb-8">
-            If I can't help — I'll tell you that too.
-          </p>
+
           <Link
             to="/bookacall"
-            className="inline-block bg-white text-amber-700 font-semibold px-8 py-3 rounded-xl text-sm hover:bg-amber-50 transition"
+            className="inline-block rounded-xl bg-white px-8 py-3 text-sm font-semibold text-amber-700 transition hover:-translate-y-0.5 hover:bg-amber-50 hover:shadow-lg"
           >
-            Schedule a Free Audit →
+            Let's Talk
           </Link>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-6 bg-amber-900 text-center">
-        <p className="text-amber-200 text-sm">
-          © 2026 Code and Coffee — Built by Sivasankaran
+      <footer className="bg-amber-900 px-6 py-8 text-center">
+        <p className="text-sm text-amber-200">
+          © 2026 Code and Coffee · Built by Sivasankaran
         </p>
       </footer>
 
     </div>
   );
 }
+
