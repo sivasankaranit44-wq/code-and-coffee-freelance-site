@@ -7,6 +7,7 @@ export default function About() {
       {/* Hero */}
       <section className="px-6 pt-32 pb-20">
         <div className="mx-auto max-w-3xl text-center">
+
           <span className="mb-6 inline-block rounded-full bg-amber-100 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-amber-700">
             Code & Coffee
           </span>
@@ -15,17 +16,20 @@ export default function About() {
             Simple solutions for real business problems.
           </h1>
 
-          <p className="mx-auto max-w-xl text-sm leading-7 text-gray-500">
-            I help businesses build websites and web applications that make
-            their work easier, give customers a better experience, and create
-            a stronger presence online.
+          <p className="mx-auto max-w-2xl text-sm leading-7 text-gray-500">
+            I build websites and web applications that help businesses work
+            better, serve customers more effectively, and grow online. I also
+            bring security-focused development practices into the applications
+            I build.
           </p>
+
         </div>
       </section>
 
       {/* What I Help With */}
       <section className="bg-white px-6 py-20">
         <div className="mx-auto max-w-4xl">
+
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-2xl font-bold text-amber-900">
               What can be improved?
@@ -38,6 +42,7 @@ export default function About() {
           </div>
 
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+
             {[
               {
                 title: "Need a better online presence?",
@@ -52,8 +57,8 @@ export default function About() {
                 desc: "Instead of changing your process to match a generic tool, I can build something around the way your business actually works.",
               },
               {
-                title: "Starting something new?",
-                desc: "If you have an idea for a website or web application, I can help turn that idea into a working product.",
+                title: "Worried about security?",
+                desc: "Web applications handle customer data, accounts and business operations. I build with authentication, authorization and protected APIs in mind from the start.",
               },
             ].map((item, i) => (
               <div
@@ -69,6 +74,7 @@ export default function About() {
                 </p>
               </div>
             ))}
+
           </div>
         </div>
       </section>
@@ -76,6 +82,7 @@ export default function About() {
       {/* What I Build */}
       <section className="bg-amber-50 px-6 py-20">
         <div className="mx-auto max-w-4xl">
+
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-2xl font-bold text-amber-900">
               What I can build for you
@@ -83,11 +90,13 @@ export default function About() {
 
             <p className="mx-auto max-w-xl text-sm leading-relaxed text-gray-500">
               From a simple business website to a complete web application,
-              the goal is always the same: build something useful.
+              the goal is always the same: build something useful, reliable
+              and appropriate for your business.
             </p>
           </div>
 
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+
             {[
               {
                 title: "Business Websites",
@@ -105,10 +114,85 @@ export default function About() {
                 title: "E-commerce Websites",
                 desc: "Online stores that make it easier for customers to browse your products, place orders and interact with your business.",
               },
+              {
+                title: "Security-Focused Web Applications",
+                desc: "Web applications developed with security considered from the beginning, including authentication, authorization, protected APIs and safer handling of application data.",
+              },
+              {
+                title: "API & Backend Solutions",
+                desc: "Structured REST APIs and backend systems that connect your application to databases, business logic and secure user access.",
+              },
             ].map((item, i) => (
               <div
                 key={i}
-                className="rounded-2xl border border-amber-100 bg-white p-6 shadow-sm"
+                className={`rounded-2xl border p-6 ${
+                  item.title === "Security-Focused Web Applications"
+                    ? "border-amber-300 bg-white shadow-md shadow-amber-900/5"
+                    : "border-amber-100 bg-white shadow-sm"
+                }`}
+              >
+                {item.title === "Security-Focused Web Applications" && (
+                  <span className="mb-4 inline-block rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold text-amber-700">
+                    Security Focus
+                  </span>
+                )}
+
+                <h3 className="mb-3 font-semibold text-amber-900">
+                  {item.title}
+                </h3>
+
+                <p className="text-sm leading-relaxed text-gray-500">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+
+          </div>
+        </div>
+      </section>
+
+      {/* Security */}
+      <section className="bg-white px-6 py-20">
+        <div className="mx-auto max-w-4xl">
+
+          <div className="mb-12 text-center">
+
+            <span className="mb-4 inline-block rounded-full bg-amber-100 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-amber-700">
+              Web Security
+            </span>
+
+            <h2 className="mb-4 text-2xl font-bold text-amber-900">
+              Build for your users. Protect what matters.
+            </h2>
+
+            <p className="mx-auto max-w-2xl text-sm leading-relaxed text-gray-500">
+              Security is part of how I approach web application development,
+              especially when an application handles user accounts, business
+              data or different levels of access. My focus is on practical
+              security measures that belong in the development process.
+            </p>
+
+          </div>
+
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+
+            {[
+              {
+                title: "Authentication",
+                desc: "Secure login and protected user access using established authentication practices.",
+              },
+              {
+                title: "Authorization",
+                desc: "Role-based permissions that help ensure users can access only the features and data they are allowed to use.",
+              },
+              {
+                title: "API Security",
+                desc: "Protected routes and security-aware API practices to reduce unauthorized access and common application risks.",
+              },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="rounded-2xl border border-amber-100 bg-amber-50 p-6"
               >
                 <h3 className="mb-3 font-semibold text-amber-900">
                   {item.title}
@@ -119,13 +203,29 @@ export default function About() {
                 </p>
               </div>
             ))}
+
           </div>
+
+          <div className="mt-10 text-center">
+            <p className="text-sm text-gray-500">
+              Need a web solution where security is considered from the start?
+            </p>
+
+            <Link
+              to="/bookacall"
+              className="mt-4 inline-block text-sm font-semibold text-amber-700 transition hover:text-amber-900"
+            >
+              Let's discuss your project →
+            </Link>
+          </div>
+
         </div>
       </section>
 
       {/* How I Approach Projects */}
-      <section className="bg-white px-6 py-20">
+      <section className="bg-amber-50 px-6 py-20">
         <div className="mx-auto max-w-4xl">
+
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-2xl font-bold text-amber-900">
               The way I approach a project
@@ -138,6 +238,7 @@ export default function About() {
           </div>
 
           <div className="grid grid-cols-1 gap-6 md:grid-cols-4">
+
             {[
               {
                 step: "01",
@@ -162,7 +263,7 @@ export default function About() {
             ].map((item, i) => (
               <div
                 key={i}
-                className="rounded-2xl border border-amber-100 bg-amber-50 p-6"
+                className="rounded-2xl border border-amber-100 bg-white p-6"
               >
                 <div className="mb-3 text-3xl font-bold text-amber-200">
                   {item.step}
@@ -177,13 +278,15 @@ export default function About() {
                 </p>
               </div>
             ))}
+
           </div>
         </div>
       </section>
 
       {/* Why This Approach */}
-      <section className="bg-amber-50 px-6 py-20">
+      <section className="bg-white px-6 py-20">
         <div className="mx-auto max-w-3xl text-center">
+
           <h2 className="mb-6 text-2xl font-bold text-amber-900">
             More than just writing code
           </h2>
@@ -198,30 +301,34 @@ export default function About() {
           <p className="mb-5 text-sm leading-7 text-gray-600">
             So when we work together, you don't need to explain everything in
             technical terms. Tell me what isn't working, what takes too much
-            time, or what you want your customers to be able to do.
+            time, what your customers need, or what you want to build.
           </p>
 
           <p className="text-sm leading-7 text-gray-600">
-            I'll help figure out what can be built and keep the process simple
-            along the way.
+            I'll help figure out what can be built, how it can be improved,
+            and where security needs to be considered along the way.
           </p>
+
         </div>
       </section>
 
       {/* Tech */}
-      <section className="bg-white px-6 py-20">
+      <section className="bg-amber-50 px-6 py-20">
         <div className="mx-auto max-w-3xl">
+
           <div className="mb-10 text-center">
             <h2 className="mb-3 text-2xl font-bold text-amber-900">
               What I work with
             </h2>
 
             <p className="text-sm text-gray-500">
-              The tools I use to build and deploy web projects.
+              The technologies and development practices I use to build web
+              solutions.
             </p>
           </div>
 
           <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
+
             {[
               "React.js",
               "Node.js",
@@ -231,24 +338,37 @@ export default function About() {
               "Tailwind CSS",
               "HTML & CSS",
               "REST APIs",
+              "JWT Authentication",
+              "RBAC",
+              "API Security",
               "Git & GitHub",
               "Vercel",
               "Render",
             ].map((skill, i) => (
               <div
                 key={i}
-                className="rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-center text-sm font-medium text-amber-900"
+                className={`rounded-xl border px-4 py-3 text-center text-sm font-medium ${
+                  [
+                    "JWT Authentication",
+                    "RBAC",
+                    "API Security",
+                  ].includes(skill)
+                    ? "border-amber-300 bg-white text-amber-900"
+                    : "border-amber-100 bg-white text-amber-900"
+                }`}
               >
                 {skill}
               </div>
             ))}
+
           </div>
         </div>
       </section>
 
       {/* Current Work */}
-      <section className="bg-amber-50 px-6 py-20">
+      <section className="bg-white px-6 py-20">
         <div className="mx-auto max-w-3xl">
+
           <div className="mb-10 text-center">
             <h2 className="mb-3 text-2xl font-bold text-amber-900">
               What I'm working on
@@ -260,6 +380,7 @@ export default function About() {
           </div>
 
           <div className="space-y-4">
+
             {[
               {
                 title: "Code & Coffee",
@@ -276,7 +397,7 @@ export default function About() {
             ].map((item, i) => (
               <div
                 key={i}
-                className="rounded-xl border border-amber-100 bg-white p-5"
+                className="rounded-xl border border-amber-100 bg-amber-50 p-5"
               >
                 <h3 className="mb-2 font-semibold text-amber-900">
                   {item.title}
@@ -287,6 +408,7 @@ export default function About() {
                 </p>
               </div>
             ))}
+
           </div>
         </div>
       </section>
@@ -294,13 +416,14 @@ export default function About() {
       {/* CTA */}
       <section className="bg-amber-700 px-6 py-20 text-center text-white">
         <div className="mx-auto max-w-2xl">
+
           <h2 className="mb-4 text-3xl font-bold">
             Have a problem you want to solve?
           </h2>
 
           <p className="mb-8 text-sm leading-relaxed text-amber-100">
-            Tell me what you're trying to build or what isn't working right
-            now. We can have a simple conversation and figure out if I can help.
+            Tell me what you're trying to build, improve or secure. We can
+            have a simple conversation and figure out the right approach.
           </p>
 
           <Link
@@ -309,6 +432,7 @@ export default function About() {
           >
             Let's Talk
           </Link>
+
         </div>
       </section>
 
