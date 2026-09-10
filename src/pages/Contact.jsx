@@ -340,13 +340,11 @@ export default function Contact() {
 
 
       {/* Footer */}
-      <footer className="bg-amber-950 px-6 py-8 text-center">
+      <footer className="border-t border-[#d8c7b8]/50 bg-[#f3ebe2] px-6 py-7 text-center">
 
-        <p className="text-sm text-amber-200">
-          © 2026 Code and Coffee · Built by Sivasankaran
-        </p>
+<p className="text-sm text-[#8f6345]"> © 2026 Code and Coffee · Built by Sivasankaran </p>
 
-      </footer>
+</footer>
 
     </div>
   );

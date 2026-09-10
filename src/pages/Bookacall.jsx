@@ -106,7 +106,7 @@ export default function BookACall() {
 
             {/* Calendly Header */}
             <div className="border-b border-white/70 px-6 py-8 text-center sm:px-8">
-            
+
               <h2 className="mb-3 text-2xl font-bold text-amber-950">
                 Pick a time that works for you.
               </h2>
@@ -156,13 +156,11 @@ export default function BookACall() {
 
 
       {/* Footer */}
-      <footer className="bg-amber-950 px-6 py-8 text-center">
+      <footer className="border-t border-[#d8c7b8]/50 bg-[#f3ebe2] px-6 py-7 text-center">
 
-        <p className="text-sm text-amber-200">
-          © 2026 Code and Coffee · Built by Sivasankaran
-        </p>
+<p className="text-sm text-[#8f6345]"> © 2026 Code and Coffee · Built by Sivasankaran </p>
 
-      </footer>
+</footer>
 
     </div>
   );

@@ -87,7 +87,7 @@ export default function Services() {
 
         <div className="relative mx-auto max-w-4xl text-center">
 
-          <span className="mb-6 inline-block rounded-full border border-white/70 bg-white/45 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-amber-800 shadow-sm backdrop-blur-md">
+          <span className="mb-6 inline-block rounded-full border border-white/70 bg-white/45 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-[#8f6345] shadow-sm backdrop-blur-md">
             Services
           </span>
 
@@ -116,7 +116,7 @@ export default function Services() {
           {/* Build */}
           <div className="rounded-2xl border border-white/80 bg-white/45 p-6 shadow-[0_10px_35px_rgba(91,55,35,0.06)] backdrop-blur-lg transition-all duration-300 hover:-translate-y-1 hover:bg-white/60 hover:shadow-[0_16px_40px_rgba(91,55,35,0.1)]">
 
-            <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-amber-600">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-[#a97852]">
               Build
             </p>
 
@@ -135,7 +135,7 @@ export default function Services() {
           {/* Improve */}
           <div className="rounded-2xl border border-white/80 bg-white/45 p-6 shadow-[0_10px_35px_rgba(91,55,35,0.06)] backdrop-blur-lg transition-all duration-300 hover:-translate-y-1 hover:bg-white/60 hover:shadow-[0_16px_40px_rgba(91,55,35,0.1)]">
 
-            <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-amber-600">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-[#a97852]">
               Improve
             </p>
 
@@ -154,7 +154,7 @@ export default function Services() {
           {/* Secure */}
           <div className="rounded-2xl border border-white/80 bg-white/45 p-6 shadow-[0_10px_35px_rgba(91,55,35,0.06)] backdrop-blur-lg transition-all duration-300 hover:-translate-y-1 hover:bg-white/60 hover:shadow-[0_16px_40px_rgba(91,55,35,0.1)]">
 
-            <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-amber-600">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-[#a97852]">
               Secure
             </p>
 
@@ -203,7 +203,7 @@ export default function Services() {
                 key={i}
                 className={`flex flex-col justify-between rounded-2xl border bg-white/50 p-6 shadow-[0_10px_35px_rgba(91,55,35,0.06)] backdrop-blur-lg transition-all duration-300 hover:-translate-y-1 hover:bg-white/65 hover:shadow-[0_16px_40px_rgba(91,55,35,0.1)] ${
                   service.title === "Security-Focused Web Development"
-                    ? "border-amber-300/80"
+                    ? "border-[#c9a486]/80"
                     : "border-white/80"
                 }`}
               >
@@ -211,7 +211,7 @@ export default function Services() {
                 <div>
 
                   {service.title === "Security-Focused Web Development" && (
-                    <span className="mb-4 inline-block rounded-full border border-amber-200/70 bg-amber-100/60 px-3 py-1 text-xs font-semibold text-amber-700">
+                    <span className="mb-4 inline-block rounded-full border border-[#d8b99d]/70 bg-[#f1e3d7]/60 px-3 py-1 text-xs font-semibold text-[#8f6345]">
                       Security Focus
                     </span>
                   )}
@@ -234,7 +234,7 @@ export default function Services() {
                         className="flex items-start gap-2 text-sm text-gray-600"
                       >
 
-                        <span className="mt-0.5 font-bold text-amber-600">
+                        <span className="mt-0.5 font-bold text-[#a97852]">
                           ✓
                         </span>
 
@@ -249,9 +249,10 @@ export default function Services() {
                 </div>
 
 
+                {/* Button */}
                 <Link
                   to="/bookacall"
-                  className="group relative block overflow-hidden rounded-lg bg-amber-700 py-2.5 text-center text-xs font-medium text-white shadow-sm shadow-amber-900/10 transition-all duration-200 hover:-translate-y-0.5 hover:bg-amber-800 hover:shadow-lg hover:shadow-amber-900/20"
+                  className="group relative block overflow-hidden rounded-lg bg-[#a97852] py-2.5 text-center text-xs font-medium text-white shadow-sm shadow-[#6f4a35]/10 transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#946947] hover:shadow-lg hover:shadow-[#6f4a35]/20"
                 >
                   <span className="relative z-10">
                     Book a Free Call
@@ -277,7 +278,7 @@ export default function Services() {
 
           <div className="mb-10 text-center">
 
-            <span className="mb-4 inline-block rounded-full border border-white/70 bg-white/45 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-amber-800 shadow-sm backdrop-blur-md">
+            <span className="mb-4 inline-block rounded-full border border-white/70 bg-white/45 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-[#8f6345] shadow-sm backdrop-blur-md">
               Web Security
             </span>
 
@@ -354,12 +355,14 @@ export default function Services() {
 
           <p className="text-sm leading-relaxed text-gray-500">
             Not sure which service fits your requirement?{" "}
+
             <Link
               to="/bookacall"
-              className="font-medium text-amber-700 transition hover:text-amber-950 hover:underline"
+              className="font-medium text-[#8f6345] transition hover:text-amber-950 hover:underline"
             >
-              Book a free 15 minute call
+              Book a free 30 minute call
             </Link>{" "}
+
             and we can understand the problem first and figure out the right
             solution.
           </p>
@@ -369,11 +372,11 @@ export default function Services() {
 
 
       {/* CTA */}
-      <section className="relative overflow-hidden bg-amber-700 px-6 py-20 text-center text-white">
+      <section className="relative overflow-hidden bg-[#a97852] px-6 py-20 text-center text-white">
 
         <div className="pointer-events-none absolute -left-20 -top-20 h-56 w-56 rounded-full bg-white/10 blur-3xl" />
 
-        <div className="pointer-events-none absolute -bottom-24 -right-20 h-64 w-64 rounded-full bg-amber-300/20 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-24 -right-20 h-64 w-64 rounded-full bg-amber-200/20 blur-3xl" />
 
         <div className="relative mx-auto max-w-2xl">
 
@@ -381,14 +384,14 @@ export default function Services() {
             Have a web project or business problem?
           </h2>
 
-          <p className="mb-8 text-sm leading-relaxed text-amber-100">
+          <p className="mb-8 text-sm leading-relaxed text-[#f4e5d8]">
             Let's have a quick conversation about what you need and whether I
             can help.
           </p>
 
           <Link
             to="/bookacall"
-            className="inline-block rounded-xl bg-white px-8 py-3 text-sm font-semibold text-amber-700 shadow-lg shadow-amber-950/10 transition-all duration-200 hover:-translate-y-0.5 hover:bg-amber-50 hover:shadow-xl"
+            className="inline-block rounded-xl bg-white px-8 py-3 text-sm font-semibold text-[#8f6345] shadow-lg shadow-[#6f4a35]/10 transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#faf5ef] hover:shadow-xl"
           >
             Book a Free Call
           </Link>
@@ -398,13 +401,11 @@ export default function Services() {
 
 
       {/* Footer */}
-      <footer className="bg-amber-950 px-6 py-8 text-center">
+      <footer className="border-t border-[#d8c7b8]/50 bg-[#f3ebe2] px-6 py-7 text-center">
 
-        <p className="text-sm text-amber-200">
-          © 2026 Code and Coffee · Built by Sivasankaran
-        </p>
+<p className="text-sm text-[#8f6345]"> © 2026 Code and Coffee · Built by Sivasankaran </p>
 
-      </footer>
+</footer>
 
     </div>
   );

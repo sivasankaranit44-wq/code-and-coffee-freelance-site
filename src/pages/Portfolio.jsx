@@ -147,7 +147,7 @@ export default function Portfolio() {
                     href={project.live}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 rounded-lg bg-amber-700 py-2.5 text-center text-xs font-medium text-white shadow-sm shadow-amber-900/10 transition-all duration-200 hover:-translate-y-0.5 hover:bg-amber-800 hover:shadow-md"
+                    className="flex-1 rounded-lg bg-[#a97852] py-2.5 text-center text-xs font-medium text-white shadow-sm shadow-[#6f4a35]/10 transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#946947] hover:shadow-md"
                   >
                     Live Demo
                   </a>
@@ -237,41 +237,41 @@ export default function Portfolio() {
 
 
       {/* CTA */}
-      <section className="relative overflow-hidden bg-amber-700 px-6 py-20 text-center text-white">
+<section className="relative overflow-hidden bg-[#a97852] px-6 py-20 text-center text-white">
 
-        <div className="pointer-events-none absolute -left-20 -top-20 h-56 w-56 rounded-full bg-white/10 blur-3xl" />
-        <div className="pointer-events-none absolute -bottom-24 -right-20 h-64 w-64 rounded-full bg-amber-300/20 blur-3xl" />
+  <div className="pointer-events-none absolute -left-20 -top-20 h-56 w-56 rounded-full bg-white/10 blur-3xl" />
+  <div className="pointer-events-none absolute -bottom-24 -right-20 h-64 w-64 rounded-full bg-[#e5c2a5]/20 blur-3xl" />
 
-        <div className="relative mx-auto max-w-2xl">
-
-          <h2 className="mb-4 text-3xl font-bold">
-            Have a project in mind?
-          </h2>
-
-          <p className="mb-8 text-sm leading-relaxed text-amber-100">
-            Let's have a quick 15 minute call and figure out if we are a good
-            fit.
-          </p>
-
-          <a
-            href="/bookacall"
-            className="inline-block rounded-xl bg-white px-8 py-3 text-sm font-semibold text-amber-700 shadow-lg shadow-amber-950/10 transition-all duration-200 hover:-translate-y-0.5 hover:bg-amber-50 hover:shadow-xl"
-          >
-            Book a Free Call
-          </a>
-
-        </div>
-      </section>
+  <div className="relative mx-auto max-w-2xl">
 
 
-      {/* Footer */}
-      <footer className="bg-amber-950 px-6 py-8 text-center">
+<h2 className="mb-4 text-3xl font-bold">
+  Have a project in mind?
+</h2>
 
-        <p className="text-sm text-amber-200">
-          © 2026 Code and Coffee · Built by Sivasankaran
-        </p>
+<p className="mb-8 text-sm leading-relaxed text-[#f5e9df]">
+  Let's have a quick 30 minute call and figure out if we are a good
+  fit.
+</p>
 
-      </footer>
+<a
+  href="/bookacall"
+  className="inline-block rounded-xl bg-white px-8 py-3 text-sm font-semibold text-[#8f6345] shadow-lg shadow-[#6f4a35]/10 transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#f7f1e9] hover:shadow-xl"
+>
+  Book a Free Call
+</a>
+
+  </div>
+</section>
+
+{/* Footer */}
+
+<footer className="border-t border-[#d8c7b8]/50 bg-[#f3ebe2] px-6 py-7 text-center">
+
+<p className="text-sm text-[#8f6345]"> © 2026 Code and Coffee · Built by Sivasankaran </p>
+
+</footer>
+
 
     </div>
   );
