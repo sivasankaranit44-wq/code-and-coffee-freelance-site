@@ -41,50 +41,71 @@ export default function Home() {
       </section>
 
       {/* What I Can Help With */}
-      <section className="border-y border-amber-100 bg-white px-6 py-16">
-        <div className="mx-auto max-w-4xl">
-          <div className="mb-10 text-center">
-            <h2 className="mb-3 text-3xl font-bold text-amber-900">
-              What can I help you build?
-            </h2>
+{/* What I Can Help With */}
+<section className="border-y border-amber-100 bg-white px-6 py-16">
+  <div className="mx-auto max-w-4xl">
+    <div className="mb-10 text-center">
+      <h2 className="mb-3 text-3xl font-bold text-amber-900">
+        What can I help you with?
+      </h2>
 
-            <p className="mx-auto max-w-xl text-sm leading-relaxed text-gray-500">
-              Whether you need a simple website or something more custom,
-              I can help you turn the idea into something people can actually use.
-            </p>
+      <p className="mx-auto max-w-xl text-sm leading-relaxed text-gray-500">
+        Whether you need something built from scratch, an existing system
+        improved, or a security check before going live, we can start with
+        the problem and figure out what makes sense.
+      </p>
+    </div>
+
+    <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+      {[
+        {
+          number: "01",
+          title: "Build",
+          desc: "Business websites, landing pages, custom web applications and e-commerce platforms built around what your business actually needs.",
+          link: "/services",
+        },
+        {
+          number: "02",
+          title: "Improve",
+          desc: "Custom dashboards, internal tools and business workflows that reduce repetitive work and make your existing processes easier to manage.",
+          link: "/services",
+        },
+        {
+          number: "03",
+          title: "Secure",
+          desc: "Security-focused reviews for websites and web applications, including authentication, authorization, APIs and common security weaknesses.",
+          link: "/services",
+        },
+      ].map((item) => (
+        <Link
+          key={item.number}
+          to={item.link}
+          className="group rounded-2xl border border-amber-100 bg-amber-50 p-6 transition-all duration-200 hover:-translate-y-1 hover:border-amber-200 hover:shadow-md"
+        >
+          <div className="mb-5 flex items-center justify-between">
+            <span className="text-3xl font-bold text-amber-200">
+              {item.number}
+            </span>
+
+            <span className="text-sm text-amber-600 transition-transform duration-200 group-hover:translate-x-1">
+              →
+            </span>
           </div>
 
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-            {[
-              {
-                title: "Business Websites",
-                desc: "A clean, mobile-friendly website that helps people understand your business and get in touch.",
-              },
-              {
-                title: "Custom Web Apps",
-                desc: "A web application built around the way your business actually works instead of forcing you into a fixed system.",
-              },
-              {
-                title: "MERN Development",
-                desc: "Full-stack development using React, Node.js, Express and MongoDB for projects that need more than a simple website.",
-              },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="rounded-2xl border border-amber-100 bg-amber-50 p-6"
-              >
-                <h3 className="mb-3 font-semibold text-amber-900">
-                  {item.title}
-                </h3>
+          <h3 className="mb-3 text-xl font-semibold text-amber-900">
+            {item.title}
+          </h3>
 
-                <p className="text-sm leading-relaxed text-gray-500">
-                  {item.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+          <p className="text-sm leading-relaxed text-gray-500">
+            {item.desc}
+          </p>
+        </Link>
+      ))}
+    </div>
+  </div>
+</section>
+
+
 
       {/* Problems Section */}
       <section className="bg-amber-50 px-6 py-20">
