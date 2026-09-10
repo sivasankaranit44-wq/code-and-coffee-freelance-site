@@ -2,17 +2,23 @@ import { Link } from "react-router-dom";
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-amber-50">
+    <div className="min-h-screen overflow-hidden bg-[#f7f1e9] text-[#3f2b22]">
 
       {/* Hero */}
-      <section className="px-6 pt-32 pb-20">
-        <div className="mx-auto max-w-3xl text-center">
+      <section className="relative px-6 pt-32 pb-20">
 
-          <span className="mb-6 inline-block rounded-full bg-amber-100 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-amber-700">
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="absolute -left-24 top-16 h-72 w-72 rounded-full bg-amber-200/30 blur-3xl" />
+          <div className="absolute -right-20 top-10 h-80 w-80 rounded-full bg-orange-100/50 blur-3xl" />
+        </div>
+
+        <div className="relative mx-auto max-w-3xl text-center">
+
+          <span className="mb-6 inline-block rounded-full border border-white/70 bg-white/45 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-amber-800 shadow-sm backdrop-blur-md">
             Code & Coffee
           </span>
 
-          <h1 className="mb-6 text-4xl font-bold leading-tight text-amber-900">
+          <h1 className="mb-6 text-4xl font-bold leading-tight text-amber-950 sm:text-5xl">
             Simple solutions for real business problems.
           </h1>
 
@@ -26,12 +32,17 @@ export default function About() {
         </div>
       </section>
 
+
       {/* What I Help With */}
-      <section className="bg-white px-6 py-20">
-        <div className="mx-auto max-w-4xl">
+      <section className="relative border-y border-white/70 bg-white/25 px-6 py-20 backdrop-blur-sm">
+
+        <div className="pointer-events-none absolute right-0 top-10 h-64 w-64 rounded-full bg-amber-200/20 blur-3xl" />
+
+        <div className="relative mx-auto max-w-4xl">
 
           <div className="mb-12 text-center">
-            <h2 className="mb-4 text-2xl font-bold text-amber-900">
+
+            <h2 className="mb-4 text-2xl font-bold text-amber-950">
               What can be improved?
             </h2>
 
@@ -39,7 +50,9 @@ export default function About() {
               Every business has different problems. The right website or
               application should fit the way you work, not the other way around.
             </p>
+
           </div>
+
 
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
 
@@ -61,30 +74,40 @@ export default function About() {
                 desc: "Web applications handle customer data, accounts and business operations. I build with authentication, authorization and protected APIs in mind from the start.",
               },
             ].map((item, i) => (
+
               <div
                 key={i}
-                className="rounded-2xl border border-amber-100 bg-amber-50 p-6"
+                className="rounded-2xl border border-white/80 bg-white/50 p-6 shadow-[0_8px_30px_rgba(91,55,35,0.05)] backdrop-blur-lg transition-all duration-300 hover:-translate-y-1 hover:bg-white/65 hover:shadow-[0_14px_35px_rgba(91,55,35,0.09)]"
               >
-                <h3 className="mb-3 font-semibold text-amber-900">
+
+                <h3 className="mb-3 font-semibold text-amber-950">
                   {item.title}
                 </h3>
 
                 <p className="text-sm leading-relaxed text-gray-500">
                   {item.desc}
                 </p>
+
               </div>
+
             ))}
 
           </div>
+
         </div>
       </section>
 
+
       {/* What I Build */}
-      <section className="bg-amber-50 px-6 py-20">
-        <div className="mx-auto max-w-4xl">
+      <section className="relative px-6 py-20">
+
+        <div className="pointer-events-none absolute left-0 top-20 h-64 w-64 rounded-full bg-orange-100/40 blur-3xl" />
+
+        <div className="relative mx-auto max-w-4xl">
 
           <div className="mb-12 text-center">
-            <h2 className="mb-4 text-2xl font-bold text-amber-900">
+
+            <h2 className="mb-4 text-2xl font-bold text-amber-950">
               What I can build for you
             </h2>
 
@@ -93,7 +116,9 @@ export default function About() {
               the goal is always the same: build something useful, reliable
               and appropriate for your business.
             </p>
+
           </div>
+
 
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
 
@@ -123,45 +148,54 @@ export default function About() {
                 desc: "Structured REST APIs and backend systems that connect your application to databases, business logic and secure user access.",
               },
             ].map((item, i) => (
+
               <div
                 key={i}
-                className={`rounded-2xl border p-6 ${
+                className={`rounded-2xl border bg-white/50 p-6 shadow-[0_10px_35px_rgba(91,55,35,0.06)] backdrop-blur-lg transition-all duration-300 hover:-translate-y-1 hover:bg-white/65 hover:shadow-[0_16px_40px_rgba(91,55,35,0.1)] ${
                   item.title === "Security-Focused Web Applications"
-                    ? "border-amber-300 bg-white shadow-md shadow-amber-900/5"
-                    : "border-amber-100 bg-white shadow-sm"
+                    ? "border-amber-300/80"
+                    : "border-white/80"
                 }`}
               >
+
                 {item.title === "Security-Focused Web Applications" && (
-                  <span className="mb-4 inline-block rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold text-amber-700">
+                  <span className="mb-4 inline-block rounded-full border border-amber-200/70 bg-amber-100/60 px-3 py-1 text-xs font-semibold text-amber-700">
                     Security Focus
                   </span>
                 )}
 
-                <h3 className="mb-3 font-semibold text-amber-900">
+                <h3 className="mb-3 font-semibold text-amber-950">
                   {item.title}
                 </h3>
 
                 <p className="text-sm leading-relaxed text-gray-500">
                   {item.desc}
                 </p>
+
               </div>
+
             ))}
 
           </div>
+
         </div>
       </section>
 
+
       {/* Security */}
-      <section className="bg-white px-6 py-20">
-        <div className="mx-auto max-w-4xl">
+      <section className="relative border-y border-white/70 bg-white/25 px-6 py-20 backdrop-blur-sm">
+
+        <div className="pointer-events-none absolute -left-20 top-20 h-72 w-72 rounded-full bg-amber-200/20 blur-3xl" />
+
+        <div className="relative mx-auto max-w-4xl">
 
           <div className="mb-12 text-center">
 
-            <span className="mb-4 inline-block rounded-full bg-amber-100 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-amber-700">
+            <span className="mb-4 inline-block rounded-full border border-white/70 bg-white/45 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-amber-800 shadow-sm backdrop-blur-md">
               Web Security
             </span>
 
-            <h2 className="mb-4 text-2xl font-bold text-amber-900">
+            <h2 className="mb-4 text-2xl font-bold text-amber-950">
               Build for your users. Protect what matters.
             </h2>
 
@@ -173,6 +207,7 @@ export default function About() {
             </p>
 
           </div>
+
 
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
 
@@ -190,44 +225,56 @@ export default function About() {
                 desc: "Protected routes and security-aware API practices to reduce unauthorized access and common application risks.",
               },
             ].map((item, i) => (
+
               <div
                 key={i}
-                className="rounded-2xl border border-amber-100 bg-amber-50 p-6"
+                className="rounded-2xl border border-white/80 bg-white/45 p-6 shadow-[0_10px_35px_rgba(91,55,35,0.06)] backdrop-blur-lg transition-all duration-300 hover:-translate-y-1 hover:bg-white/60"
               >
-                <h3 className="mb-3 font-semibold text-amber-900">
+
+                <h3 className="mb-3 font-semibold text-amber-950">
                   {item.title}
                 </h3>
 
                 <p className="text-sm leading-relaxed text-gray-500">
                   {item.desc}
                 </p>
+
               </div>
+
             ))}
 
           </div>
 
+
           <div className="mt-10 text-center">
+
             <p className="text-sm text-gray-500">
               Need a web solution where security is considered from the start?
             </p>
 
             <Link
               to="/bookacall"
-              className="mt-4 inline-block text-sm font-semibold text-amber-700 transition hover:text-amber-900"
+              className="mt-4 inline-block text-sm font-semibold text-amber-700 transition hover:text-amber-950"
             >
               Let's discuss your project →
             </Link>
+
           </div>
 
         </div>
       </section>
 
+
       {/* How I Approach Projects */}
-      <section className="bg-amber-50 px-6 py-20">
-        <div className="mx-auto max-w-4xl">
+      <section className="relative px-6 py-20">
+
+        <div className="pointer-events-none absolute right-0 top-20 h-64 w-64 rounded-full bg-orange-100/40 blur-3xl" />
+
+        <div className="relative mx-auto max-w-4xl">
 
           <div className="mb-12 text-center">
-            <h2 className="mb-4 text-2xl font-bold text-amber-900">
+
+            <h2 className="mb-4 text-2xl font-bold text-amber-950">
               The way I approach a project
             </h2>
 
@@ -235,7 +282,9 @@ export default function About() {
               Before thinking about code, I want to understand what you are
               actually trying to solve.
             </p>
+
           </div>
+
 
           <div className="grid grid-cols-1 gap-6 md:grid-cols-4">
 
@@ -261,33 +310,40 @@ export default function About() {
                 desc: "After launch, we look at what works, what needs changing and what can be added later.",
               },
             ].map((item, i) => (
+
               <div
                 key={i}
-                className="rounded-2xl border border-amber-100 bg-white p-6"
+                className="rounded-2xl border border-white/80 bg-white/45 p-6 shadow-[0_8px_30px_rgba(91,55,35,0.05)] backdrop-blur-lg transition-all duration-300 hover:-translate-y-1 hover:bg-white/60"
               >
-                <div className="mb-3 text-3xl font-bold text-amber-200">
+
+                <div className="mb-3 text-3xl font-bold text-amber-300/80">
                   {item.step}
                 </div>
 
-                <h3 className="mb-2 text-sm font-semibold text-amber-900">
+                <h3 className="mb-2 text-sm font-semibold text-amber-950">
                   {item.title}
                 </h3>
 
                 <p className="text-xs leading-relaxed text-gray-500">
                   {item.desc}
                 </p>
+
               </div>
+
             ))}
 
           </div>
+
         </div>
       </section>
 
-      {/* Why This Approach */}
-      <section className="bg-white px-6 py-20">
-        <div className="mx-auto max-w-3xl text-center">
 
-          <h2 className="mb-6 text-2xl font-bold text-amber-900">
+      {/* Why This Approach */}
+      <section className="relative border-y border-white/70 bg-white/25 px-6 py-20 backdrop-blur-sm">
+
+        <div className="relative mx-auto max-w-3xl text-center">
+
+          <h2 className="mb-6 text-2xl font-bold text-amber-950">
             More than just writing code
           </h2>
 
@@ -312,12 +368,17 @@ export default function About() {
         </div>
       </section>
 
+
       {/* Tech */}
-      <section className="bg-amber-50 px-6 py-20">
-        <div className="mx-auto max-w-3xl">
+      <section className="relative px-6 py-20">
+
+        <div className="pointer-events-none absolute left-0 top-20 h-64 w-64 rounded-full bg-amber-200/20 blur-3xl" />
+
+        <div className="relative mx-auto max-w-3xl">
 
           <div className="mb-10 text-center">
-            <h2 className="mb-3 text-2xl font-bold text-amber-900">
+
+            <h2 className="mb-3 text-2xl font-bold text-amber-950">
               What I work with
             </h2>
 
@@ -325,7 +386,9 @@ export default function About() {
               The technologies and development practices I use to build web
               solutions.
             </p>
+
           </div>
+
 
           <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
 
@@ -345,39 +408,49 @@ export default function About() {
               "Vercel",
               "Render",
             ].map((skill, i) => (
+
               <div
                 key={i}
-                className={`rounded-xl border px-4 py-3 text-center text-sm font-medium ${
+                className={`rounded-xl border px-4 py-3 text-center text-sm font-medium shadow-sm backdrop-blur-md transition-all duration-200 hover:-translate-y-0.5 ${
                   [
                     "JWT Authentication",
                     "RBAC",
                     "API Security",
                   ].includes(skill)
-                    ? "border-amber-300 bg-white text-amber-900"
-                    : "border-amber-100 bg-white text-amber-900"
+                    ? "border-amber-300/80 bg-white/60 text-amber-900"
+                    : "border-white/80 bg-white/45 text-amber-900"
                 }`}
               >
                 {skill}
               </div>
+
             ))}
 
           </div>
+
         </div>
       </section>
 
+
       {/* Current Work */}
-      <section className="bg-white px-6 py-20">
-        <div className="mx-auto max-w-3xl">
+      <section className="relative border-y border-white/70 bg-white/25 px-6 py-20 backdrop-blur-sm">
+
+        <div className="pointer-events-none absolute right-0 top-10 h-64 w-64 rounded-full bg-orange-100/40 blur-3xl" />
+
+        <div className="relative mx-auto max-w-3xl">
 
           <div className="mb-10 text-center">
-            <h2 className="mb-3 text-2xl font-bold text-amber-900">
+
+            <h2 className="mb-3 text-2xl font-bold text-amber-950">
               What I'm working on
             </h2>
 
             <p className="text-sm text-gray-500">
               A few things I'm building and exploring right now.
             </p>
+
           </div>
+
 
           <div className="space-y-4">
 
@@ -395,27 +468,38 @@ export default function About() {
                 text: "Building a portfolio-focused project to help freshers and career switchers improve how they present their work.",
               },
             ].map((item, i) => (
+
               <div
                 key={i}
-                className="rounded-xl border border-amber-100 bg-amber-50 p-5"
+                className="rounded-2xl border border-white/80 bg-white/45 p-5 shadow-[0_8px_30px_rgba(91,55,35,0.05)] backdrop-blur-lg transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/60"
               >
-                <h3 className="mb-2 font-semibold text-amber-900">
+
+                <h3 className="mb-2 font-semibold text-amber-950">
                   {item.title}
                 </h3>
 
                 <p className="text-sm leading-relaxed text-gray-500">
                   {item.text}
                 </p>
+
               </div>
+
             ))}
 
           </div>
+
         </div>
       </section>
 
+
       {/* CTA */}
-      <section className="bg-amber-700 px-6 py-20 text-center text-white">
-        <div className="mx-auto max-w-2xl">
+      <section className="relative overflow-hidden bg-amber-700 px-6 py-20 text-center text-white">
+
+        <div className="pointer-events-none absolute -left-20 -top-20 h-56 w-56 rounded-full bg-white/10 blur-3xl" />
+
+        <div className="pointer-events-none absolute -bottom-24 -right-20 h-64 w-64 rounded-full bg-amber-300/20 blur-3xl" />
+
+        <div className="relative mx-auto max-w-2xl">
 
           <h2 className="mb-4 text-3xl font-bold">
             Have a problem you want to solve?
@@ -428,7 +512,7 @@ export default function About() {
 
           <Link
             to="/bookacall"
-            className="inline-block rounded-xl bg-white px-8 py-3 text-sm font-semibold text-amber-700 transition hover:-translate-y-0.5 hover:bg-amber-50 hover:shadow-lg"
+            className="inline-block rounded-xl bg-white px-8 py-3 text-sm font-semibold text-amber-700 shadow-lg shadow-amber-950/10 transition-all duration-200 hover:-translate-y-0.5 hover:bg-amber-50 hover:shadow-xl"
           >
             Let's Talk
           </Link>
@@ -436,11 +520,14 @@ export default function About() {
         </div>
       </section>
 
+
       {/* Footer */}
-      <footer className="bg-amber-900 px-6 py-8 text-center">
+      <footer className="bg-amber-950 px-6 py-8 text-center">
+
         <p className="text-sm text-amber-200">
           © 2026 Code and Coffee · Built by Sivasankaran
         </p>
+
       </footer>
 
     </div>

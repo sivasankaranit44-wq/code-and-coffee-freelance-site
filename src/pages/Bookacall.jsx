@@ -2,21 +2,27 @@ import { InlineWidget } from "react-calendly";
 
 export default function BookACall() {
   return (
-    <div className="min-h-screen bg-amber-50">
+    <div className="min-h-screen overflow-hidden bg-[#f7f1e9] text-[#3f2b22]">
 
       {/* Hero */}
-      <section className="pt-32 pb-10 px-6">
-        <div className="max-w-3xl mx-auto text-center">
+      <section className="relative px-6 pt-32 pb-14">
 
-          <span className="inline-block bg-amber-100 text-amber-700 text-xs font-semibold px-4 py-1.5 rounded-full mb-6 tracking-wide uppercase">
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="absolute -left-24 top-16 h-72 w-72 rounded-full bg-amber-200/30 blur-3xl" />
+          <div className="absolute -right-20 top-10 h-80 w-80 rounded-full bg-orange-100/50 blur-3xl" />
+        </div>
+
+        <div className="relative mx-auto max-w-3xl text-center">
+
+          <span className="mb-6 inline-block rounded-full border border-white/70 bg-white/45 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-amber-800 shadow-sm backdrop-blur-md">
             Book a Call
           </span>
 
-          <h1 className="text-4xl font-bold text-amber-900 leading-tight mb-4">
+          <h1 className="mb-4 text-4xl font-bold leading-tight text-amber-950 sm:text-5xl">
             Let's talk about your project.
           </h1>
 
-          <p className="text-gray-500 text-sm max-w-xl mx-auto">
+          <p className="mx-auto max-w-xl text-sm leading-relaxed text-gray-500">
             No lengthy emails. No back and forth. Just a quick 30 minute call
             to understand what you need and whether I am the right fit to
             build it.
@@ -27,14 +33,24 @@ export default function BookACall() {
 
 
       {/* What to expect */}
-      <section className="py-10 px-6">
-        <div className="max-w-3xl mx-auto">
+      <section className="relative px-6 py-10 pb-16">
 
-          <h2 className="text-2xl font-bold text-amber-900 mb-8 text-center">
-            What happens in the call?
-          </h2>
+        <div className="pointer-events-none absolute right-0 top-10 h-64 w-64 rounded-full bg-amber-200/20 blur-3xl" />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="relative mx-auto max-w-3xl">
+
+          <div className="mb-10 text-center">
+            <h2 className="mb-3 text-2xl font-bold text-amber-950">
+              What happens in the call?
+            </h2>
+
+            <p className="mx-auto max-w-xl text-sm leading-relaxed text-gray-500">
+              A simple conversation to understand the problem, the idea, and
+              what the next step could look like.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
 
             {[
               {
@@ -55,18 +71,18 @@ export default function BookACall() {
             ].map((item, i) => (
               <div
                 key={i}
-                className="bg-white rounded-2xl border border-amber-100 shadow-sm p-6 text-center"
+                className="rounded-2xl border border-white/80 bg-white/45 p-6 text-center shadow-[0_10px_35px_rgba(91,55,35,0.06)] backdrop-blur-lg transition-all duration-300 hover:-translate-y-1 hover:bg-white/60 hover:shadow-[0_16px_40px_rgba(91,55,35,0.09)]"
               >
 
-                <div className="text-3xl font-bold text-amber-200 mb-3">
+                <div className="mb-4 text-3xl font-bold text-amber-300/80">
                   {item.step}
                 </div>
 
-                <h3 className="font-semibold text-amber-900 mb-2 text-sm">
+                <h3 className="mb-2 text-sm font-semibold text-amber-950">
                   {item.title}
                 </h3>
 
-                <p className="text-gray-500 text-xs leading-relaxed">
+                <p className="text-xs leading-relaxed text-gray-500">
                   {item.desc}
                 </p>
 
@@ -80,23 +96,22 @@ export default function BookACall() {
 
 
       {/* Calendly Section */}
-      <section className="py-10 px-6">
-        <div className="max-w-4xl mx-auto">
+      <section className="relative px-6 py-10 pb-20">
 
-          <div className="bg-white rounded-2xl border border-amber-100 shadow-sm overflow-hidden">
+        <div className="pointer-events-none absolute left-0 top-20 h-72 w-72 rounded-full bg-orange-100/40 blur-3xl" />
+
+        <div className="relative mx-auto max-w-4xl">
+
+          <div className="overflow-hidden rounded-2xl border border-white/80 bg-white/50 shadow-[0_12px_40px_rgba(91,55,35,0.08)] backdrop-blur-lg">
 
             {/* Calendly Header */}
-            <div className="p-8 text-center">
-
-              <div className="text-4xl mb-4">
-                ☕
-              </div>
-
-              <h2 className="text-2xl font-bold text-amber-900 mb-3">
+            <div className="border-b border-white/70 px-6 py-8 text-center sm:px-8">
+            
+              <h2 className="mb-3 text-2xl font-bold text-amber-950">
                 Pick a time that works for you.
               </h2>
 
-              <p className="text-gray-500 text-sm">
+              <p className="text-sm text-gray-500">
                 Choose a convenient time and let's talk about your project.
               </p>
 
@@ -104,7 +119,7 @@ export default function BookACall() {
 
 
             {/* Calendly Inline Widget */}
-            <div className="w-full">
+            <div className="w-full bg-white/30">
 
               <InlineWidget
                 url="https://calendly.com/d/dtgd-ztb-mkb"
@@ -118,14 +133,14 @@ export default function BookACall() {
 
 
             {/* Email */}
-            <div className="text-center p-8">
+            <div className="border-t border-white/70 px-6 py-8 text-center">
 
-              <p className="text-gray-400 text-xs">
+              <p className="text-xs text-gray-400">
                 Prefer email instead?{" "}
 
                 <a
                   href="mailto:sivasankaranit44@gmail.com"
-                  className="text-amber-700 font-medium hover:underline"
+                  className="font-medium text-amber-700 transition hover:text-amber-950 hover:underline"
                 >
                   sivasankaranit44@gmail.com
                 </a>
@@ -141,10 +156,10 @@ export default function BookACall() {
 
 
       {/* Footer */}
-      <footer className="py-8 px-6 bg-amber-900 text-center mt-20">
+      <footer className="bg-amber-950 px-6 py-8 text-center">
 
-        <p className="text-amber-200 text-sm">
-          2026 Code and Coffee. Built by Sivasankaran
+        <p className="text-sm text-amber-200">
+          © 2026 Code and Coffee · Built by Sivasankaran
         </p>
 
       </footer>

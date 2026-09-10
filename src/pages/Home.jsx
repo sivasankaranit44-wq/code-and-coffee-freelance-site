@@ -2,17 +2,24 @@ import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-amber-50">
+    <div className="min-h-screen overflow-hidden bg-[#f7f1e9]">
 
       {/* Hero Section */}
-      <section className="px-6 pt-32 pb-20">
-        <div className="mx-auto max-w-4xl text-center">
+      <section className="relative px-6 pt-32 pb-24">
 
-          <span className="mb-6 inline-block rounded-full bg-amber-100 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-amber-700">
+        {/* Background Glow */}
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="absolute -left-24 top-20 h-72 w-72 rounded-full bg-amber-200/30 blur-3xl" />
+          <div className="absolute -right-20 top-10 h-80 w-80 rounded-full bg-orange-100/50 blur-3xl" />
+        </div>
+
+        <div className="relative mx-auto max-w-4xl text-center">
+
+          <span className="mb-6 inline-block rounded-full border border-white/70 bg-white/45 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-amber-800 shadow-sm backdrop-blur-md">
             Freelance Web Developer
           </span>
 
-          <h1 className="mb-6 text-5xl font-bold leading-tight text-amber-900">
+          <h1 className="mb-6 text-5xl font-bold leading-tight text-amber-950">
             Your business deserves a website that
             <span className="text-amber-600"> actually helps.</span>
           </h1>
@@ -27,14 +34,14 @@ export default function Home() {
 
             <Link
               to="/bookacall"
-              className="rounded-xl bg-amber-700 px-8 py-3 text-sm font-medium text-white transition hover:-translate-y-0.5 hover:bg-amber-800 hover:shadow-lg"
+              className="rounded-xl bg-amber-700 px-8 py-3 text-sm font-medium text-white shadow-md shadow-amber-900/10 transition-all duration-200 hover:-translate-y-0.5 hover:bg-amber-800 hover:shadow-lg"
             >
               Let's Talk About Your Project
             </Link>
 
             <Link
               to="/portfolio"
-              className="rounded-xl border border-amber-700 px-8 py-3 text-sm font-medium text-amber-700 transition hover:bg-amber-100"
+              className="rounded-xl border border-amber-700/70 bg-white/35 px-8 py-3 text-sm font-medium text-amber-800 backdrop-blur-md transition-all duration-200 hover:-translate-y-0.5 hover:bg-white/60"
             >
               See My Work
             </Link>
@@ -43,13 +50,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* What I Can Help With */}
-      <section className="border-y border-amber-100 bg-white px-6 py-16">
-        <div className="mx-auto max-w-4xl">
+
+      {/* Build Improve Secure */}
+      <section className="relative border-y border-white/70 bg-white/25 px-6 py-20 backdrop-blur-sm">
+
+        <div className="pointer-events-none absolute right-0 top-0 h-56 w-56 rounded-full bg-amber-200/20 blur-3xl" />
+
+        <div className="relative mx-auto max-w-4xl">
 
           <div className="mb-10 text-center">
 
-            <h2 className="mb-3 text-3xl font-bold text-amber-900">
+            <h2 className="mb-3 text-3xl font-bold text-amber-950">
               Build. Improve. Secure.
             </h2>
 
@@ -80,15 +91,16 @@ export default function Home() {
                 desc: "Security-focused web development with attention to authentication, authorization, protected APIs and common application security risks.",
               },
             ].map((item) => (
+
               <Link
                 key={item.number}
                 to="/services"
-                className="group rounded-2xl border border-amber-100 bg-amber-50 p-6 transition-all duration-200 hover:-translate-y-1 hover:border-amber-200 hover:shadow-md"
+                className="group rounded-2xl border border-white/80 bg-white/45 p-6 shadow-[0_10px_35px_rgba(91,55,35,0.07)] backdrop-blur-lg transition-all duration-300 hover:-translate-y-1 hover:bg-white/60 hover:shadow-[0_16px_40px_rgba(91,55,35,0.11)]"
               >
 
                 <div className="mb-5 flex items-center justify-between">
 
-                  <span className="text-3xl font-bold text-amber-200">
+                  <span className="text-3xl font-bold text-amber-300/80">
                     {item.number}
                   </span>
 
@@ -98,7 +110,7 @@ export default function Home() {
 
                 </div>
 
-                <h3 className="mb-3 text-xl font-semibold text-amber-900">
+                <h3 className="mb-3 text-xl font-semibold text-amber-950">
                   {item.title}
                 </h3>
 
@@ -107,19 +119,24 @@ export default function Home() {
                 </p>
 
               </Link>
+
             ))}
 
           </div>
         </div>
       </section>
 
+
       {/* Problems Section */}
-      <section className="bg-amber-50 px-6 py-20">
-        <div className="mx-auto max-w-4xl">
+      <section className="relative px-6 py-20">
+
+        <div className="pointer-events-none absolute left-0 top-20 h-64 w-64 rounded-full bg-orange-100/40 blur-3xl" />
+
+        <div className="relative mx-auto max-w-4xl">
 
           <div className="mb-12 text-center">
 
-            <h2 className="mb-4 text-3xl font-bold text-amber-900">
+            <h2 className="mb-4 text-3xl font-bold text-amber-950">
               Maybe your current setup is making things harder than they need to be.
             </h2>
 
@@ -150,12 +167,13 @@ export default function Home() {
                 desc: "When an application handles customer accounts, business data or different user roles, security needs to be considered as part of the build.",
               },
             ].map((item, i) => (
+
               <div
                 key={i}
-                className="rounded-2xl border border-amber-100 bg-white p-6 shadow-sm"
+                className="rounded-2xl border border-white/80 bg-white/50 p-6 shadow-[0_8px_30px_rgba(91,55,35,0.05)] backdrop-blur-lg transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/65"
               >
 
-                <h3 className="mb-2 font-semibold text-amber-900">
+                <h3 className="mb-2 font-semibold text-amber-950">
                   {item.title}
                 </h3>
 
@@ -164,19 +182,22 @@ export default function Home() {
                 </p>
 
               </div>
+
             ))}
 
           </div>
         </div>
       </section>
 
+
       {/* Built Around Your Business */}
-      <section className="bg-white px-6 py-20">
-        <div className="mx-auto max-w-4xl">
+      <section className="relative border-y border-white/70 bg-white/25 px-6 py-20 backdrop-blur-sm">
+
+        <div className="relative mx-auto max-w-4xl">
 
           <div className="mb-12 text-center">
 
-            <h2 className="mb-4 text-3xl font-bold text-amber-900">
+            <h2 className="mb-4 text-3xl font-bold text-amber-950">
               Built around your business.
             </h2>
 
@@ -190,44 +211,37 @@ export default function Home() {
 
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
 
-            <div className="rounded-2xl border border-amber-100 bg-amber-50 p-6">
+            {[
+              {
+                title: "Business Websites",
+                desc: "Professional websites that explain your business clearly, build trust and make it easy for customers to contact you.",
+              },
+              {
+                title: "Business Applications",
+                desc: "Dashboards, CRM systems, internal tools and custom applications that help reduce manual work and organize your operations.",
+              },
+              {
+                title: "Secure Web Solutions",
+                desc: "Web applications developed with authentication, user permissions and protected APIs considered from the beginning.",
+              },
+            ].map((item, i) => (
 
-              <h3 className="mb-3 font-semibold text-amber-900">
-                Business Websites
-              </h3>
+              <div
+                key={i}
+                className="rounded-2xl border border-white/80 bg-white/45 p-6 shadow-[0_10px_35px_rgba(91,55,35,0.06)] backdrop-blur-lg transition-all duration-300 hover:-translate-y-1 hover:bg-white/60"
+              >
 
-              <p className="text-sm leading-relaxed text-gray-500">
-                Professional websites that explain your business clearly,
-                build trust and make it easy for customers to contact you.
-              </p>
+                <h3 className="mb-3 font-semibold text-amber-950">
+                  {item.title}
+                </h3>
 
-            </div>
+                <p className="text-sm leading-relaxed text-gray-500">
+                  {item.desc}
+                </p>
 
-            <div className="rounded-2xl border border-amber-100 bg-amber-50 p-6">
+              </div>
 
-              <h3 className="mb-3 font-semibold text-amber-900">
-                Business Applications
-              </h3>
-
-              <p className="text-sm leading-relaxed text-gray-500">
-                Dashboards, CRM systems, internal tools and custom applications
-                that help reduce manual work and organize your operations.
-              </p>
-
-            </div>
-
-            <div className="rounded-2xl border border-amber-100 bg-amber-50 p-6">
-
-              <h3 className="mb-3 font-semibold text-amber-900">
-                Secure Web Solutions
-              </h3>
-
-              <p className="text-sm leading-relaxed text-gray-500">
-                Web applications developed with authentication, user
-                permissions and protected APIs considered from the beginning.
-              </p>
-
-            </div>
+            ))}
 
           </div>
 
@@ -235,7 +249,7 @@ export default function Home() {
 
             <Link
               to="/services"
-              className="text-sm font-semibold text-amber-700 transition hover:text-amber-900"
+              className="text-sm font-semibold text-amber-700 transition hover:text-amber-950"
             >
               Explore my services →
             </Link>
@@ -245,13 +259,15 @@ export default function Home() {
         </div>
       </section>
 
+
       {/* Projects */}
-      <section className="bg-amber-50 px-6 py-20">
+      <section className="relative px-6 py-20">
+
         <div className="mx-auto max-w-4xl">
 
           <div className="mb-12 text-center">
 
-            <h2 className="mb-4 text-3xl font-bold text-amber-900">
+            <h2 className="mb-4 text-3xl font-bold text-amber-950">
               A few things I've built
             </h2>
 
@@ -285,16 +301,17 @@ export default function Home() {
                 desc: "Clean and responsive websites designed to help businesses present their services and make it easier for customers to connect.",
               },
             ].map((project, i) => (
+
               <div
                 key={i}
-                className="rounded-2xl border border-amber-100 bg-white p-6 shadow-sm"
+                className="rounded-2xl border border-white/80 bg-white/50 p-6 shadow-[0_8px_30px_rgba(91,55,35,0.05)] backdrop-blur-lg transition-all duration-300 hover:-translate-y-1 hover:bg-white/65"
               >
 
-                <span className="mb-3 inline-block rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold text-amber-700">
+                <span className="mb-3 inline-block rounded-full border border-amber-100 bg-amber-100/60 px-3 py-1 text-xs font-semibold text-amber-700">
                   {project.type}
                 </span>
 
-                <h3 className="mb-3 text-lg font-bold text-amber-900">
+                <h3 className="mb-3 text-lg font-bold text-amber-950">
                   {project.name}
                 </h3>
 
@@ -303,6 +320,7 @@ export default function Home() {
                 </p>
 
               </div>
+
             ))}
 
           </div>
@@ -311,7 +329,7 @@ export default function Home() {
 
             <Link
               to="/portfolio"
-              className="text-sm font-semibold text-amber-700 transition hover:text-amber-900"
+              className="text-sm font-semibold text-amber-700 transition hover:text-amber-950"
             >
               View all projects →
             </Link>
@@ -321,11 +339,13 @@ export default function Home() {
         </div>
       </section>
 
+
       {/* How I Work */}
-      <section className="bg-white px-6 py-20">
+      <section className="relative border-y border-white/70 bg-white/25 px-6 py-20 backdrop-blur-sm">
+
         <div className="mx-auto max-w-4xl text-center">
 
-          <h2 className="mb-4 text-3xl font-bold text-amber-900">
+          <h2 className="mb-4 text-3xl font-bold text-amber-950">
             How I work
           </h2>
 
@@ -358,16 +378,17 @@ export default function Home() {
                 desc: "Once everything is ready, we launch and I help with the next steps.",
               },
             ].map((step, i) => (
+
               <div
                 key={i}
-                className="rounded-2xl border border-amber-100 bg-amber-50 p-6"
+                className="rounded-2xl border border-white/80 bg-white/45 p-6 shadow-[0_8px_30px_rgba(91,55,35,0.05)] backdrop-blur-lg transition-all duration-300 hover:-translate-y-1 hover:bg-white/60"
               >
 
-                <div className="mb-3 text-3xl font-bold text-amber-200">
+                <div className="mb-3 text-3xl font-bold text-amber-300/80">
                   {step.step}
                 </div>
 
-                <h3 className="mb-2 text-sm font-semibold text-amber-900">
+                <h3 className="mb-2 text-sm font-semibold text-amber-950">
                   {step.title}
                 </h3>
 
@@ -376,17 +397,20 @@ export default function Home() {
                 </p>
 
               </div>
+
             ))}
 
           </div>
         </div>
       </section>
 
+
       {/* About Me */}
-      <section className="bg-amber-50 px-6 py-20">
+      <section className="relative px-6 py-20">
+
         <div className="mx-auto max-w-3xl text-center">
 
-          <h2 className="mb-4 text-3xl font-bold text-amber-900">
+          <h2 className="mb-4 text-3xl font-bold text-amber-950">
             Why Code & Coffee?
           </h2>
 
@@ -407,9 +431,14 @@ export default function Home() {
         </div>
       </section>
 
+
       {/* CTA */}
-      <section className="bg-amber-700 px-6 py-20 text-center text-white">
-        <div className="mx-auto max-w-2xl">
+      <section className="relative overflow-hidden bg-amber-700 px-6 py-20 text-center text-white">
+
+        <div className="pointer-events-none absolute -left-20 -top-20 h-56 w-56 rounded-full bg-white/10 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-24 -right-20 h-64 w-64 rounded-full bg-amber-300/20 blur-3xl" />
+
+        <div className="relative mx-auto max-w-2xl">
 
           <h2 className="mb-4 text-3xl font-bold">
             Have a problem you want to solve?
@@ -422,7 +451,7 @@ export default function Home() {
 
           <Link
             to="/bookacall"
-            className="inline-block rounded-xl bg-white px-8 py-3 text-sm font-semibold text-amber-700 transition hover:-translate-y-0.5 hover:bg-amber-50 hover:shadow-lg"
+            className="inline-block rounded-xl bg-white px-8 py-3 text-sm font-semibold text-amber-700 shadow-lg shadow-amber-950/10 transition-all duration-200 hover:-translate-y-0.5 hover:bg-amber-50 hover:shadow-xl"
           >
             Let's Talk
           </Link>
@@ -430,11 +459,14 @@ export default function Home() {
         </div>
       </section>
 
+
       {/* Footer */}
-      <footer className="bg-amber-900 px-6 py-8 text-center">
+      <footer className="bg-amber-950 px-6 py-8 text-center">
+
         <p className="text-sm text-amber-200">
           © 2026 Code and Coffee · Built by Sivasankaran
         </p>
+
       </footer>
 
     </div>
